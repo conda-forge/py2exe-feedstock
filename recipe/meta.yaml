@@ -11,7 +11,7 @@ source:
   sha256: 6bb7ff4834ef2096823710c67edf49c971422775fa41c9c7718c19f0437a2d3d
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - build_exe = py2exe.build_exe:main
   skip: True  # [ not win ]
