@@ -11,7 +11,7 @@ source:
   sha256: 6cd7bd3f1f763eaecf28d2341b6a71e63927dc91c4611e500e4a43b2ecda32ea
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - build_exe = py2exe.build_exe:main
   skip: true  # [ not win]
@@ -52,6 +52,8 @@ about:
     - LICENSE.txt
     - MPL2-License.txt
     - MIT-License.txt
+  description: |
+    `py2exe` is a distutils extension which allows to build standalone Windows executable programs (32-bit and 64-bit) from Python scripts
 
 extra:
   recipe-maintainers:
