@@ -13,6 +13,9 @@ Development: https://github.com/py2exe/py2exe
 
 Documentation: http://www.py2exe.org/index.cgi/Tutorial
 
+`py2exe` is a distutils extension which allows to build standalone Windows executable programs (32-bit and 64-bit) from Python scripts
+
+
 Current build status
 ====================
 
