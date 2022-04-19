@@ -33,6 +33,7 @@ requirements:
     - cachetools
     - pefile
     - python
+    - setuptools
 
 test:
   imports:
