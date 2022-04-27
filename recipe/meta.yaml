@@ -16,6 +16,7 @@ build:
     - build_exe = py2exe.build_exe:main
   skip: true  # [ not win]
   skip: true  # [ py < 36]
+  skip: true  # [ python_impl == 'pypy']
 
   script: {{ PYTHON }} -m pip install . -vv
 
