@@ -1,5 +1,5 @@
 {% set name = "py2exe" %}
-{% set version = "0.11.1.1" %}
+{% set version = "0.12.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/py2exe/py2exe/archive/v{{ version }}.tar.gz
-  sha256: 5b2f79aa513498d1f912b8505750fb05310a02603013e51d10ea2e6b385bf15b
+  sha256: 539582b7afb0871b5e6d1cfd5144d6f6e3214e6eb52672423bef5c14aedb874d
 
 build:
   number: 0
