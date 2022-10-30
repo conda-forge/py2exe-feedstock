@@ -17,6 +17,8 @@ build:
   skip: true  # [ not win]
   skip: true  # [ py < 36]
   skip: true  # [ python_impl == 'pypy']
+  skip: true  # [ py > 310]
+  #Not yet ready for Python 3.11
 
   script: {{ PYTHON }} -m pip install . -vv
 
