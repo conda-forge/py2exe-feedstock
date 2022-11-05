@@ -15,10 +15,8 @@ build:
   entry_points:
     - build_exe = py2exe.build_exe:main
   skip: true  # [ not win]
-  skip: true  # [ py < 36]
+  skip: true  # [ py < 37]
   skip: true  # [ python_impl == 'pypy']
-  skip: true  # [ py > 310]
-  #Not yet ready for Python 3.11
 
   script: {{ PYTHON }} -m pip install . -vv
 
