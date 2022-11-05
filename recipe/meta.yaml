@@ -35,8 +35,8 @@ requirements:
 
 test:
   imports:
-    py2exe
-    zipextimporter
+    - py2exe
+    - zipextimporter
   commands:
     - pip check
   requires:
