@@ -12,8 +12,6 @@ source:
 
 build:
   number: 0
-  entry_points:
-    - build_exe = py2exe.build_exe:main
   skip: true  # [ not win]
   skip: true  # [ py < 37]
   skip: true  # [ python_impl == 'pypy']
@@ -37,10 +35,10 @@ requirements:
 
 test:
   imports:
-    - py2exe
+    py2exe
+    zipextimporter
   commands:
     - pip check
-    - build_exe -h
   requires:
     - pip
 
