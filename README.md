@@ -1,11 +1,11 @@
-About py2exe
-============
+About py2exe-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py2exe-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.py2exe.org/
 
 Package license: MIT AND X11 AND MPL-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/py2exe-feedstock/blob/main/LICENSE.txt)
 
 Summary: Build standalone executables for Windows
 
