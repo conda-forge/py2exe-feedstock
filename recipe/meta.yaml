@@ -17,6 +17,7 @@ build:
 
 requirements:
   host:
+    -setuptools
     - python >=3.8,<3.12
     - wheel
     - cachetools
@@ -25,6 +26,7 @@ requirements:
     - pip
   run:
     - python >=3.8,<3.12
+    - pefile
     - cachetools
     - __win   # [win]
 
