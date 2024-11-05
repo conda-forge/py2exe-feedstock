@@ -24,6 +24,7 @@ requirements:
     - pefile
     - packaging
     - pip
+    - __win   # [win]
   run:
     - python >=3.8,<3.12
     - pefile
