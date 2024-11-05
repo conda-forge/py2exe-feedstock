@@ -17,7 +17,7 @@ build:
 
 requirements:
   host:
-    -setuptools
+    - setuptools
     - python >=3.8,<3.12
     - wheel
     - cachetools
