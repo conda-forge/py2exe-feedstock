@@ -11,28 +11,22 @@ source:
   sha256: ef2907f5b82ec8b2259bea41a2d7d798ecd67aa4a92a74a06550b9123dadd8a4
 
 build:
-  number: 1
-  skip: true  # [ not win]
-  skip: true  # [ py < 38]
-  skip: true  # [ py >= 312]
-  skip: true  # [ python_impl == 'pypy']
+  number: 2
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
   host:
-    - setuptools
+    - python >=3.8,<3.12
+    - wheel
+    - cachetools
+    - pefile
+    - packaging
     - pip
-    - python
-    # package imports itself at build time
-    - pefile
-    - cachetools
   run:
+    - python >=3.8,<3.12
     - cachetools
-    - pefile
-    - python
+    - __win   # [win]
 
 test:
   imports:
