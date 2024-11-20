@@ -11,6 +11,7 @@ source:
   sha256: ef2907f5b82ec8b2259bea41a2d7d798ecd67aa4a92a74a06550b9123dadd8a4
 
 build:
+  noarch: python
   number: 1
   skip: true  # [ not win]
   skip: true  # [ py < 38]
