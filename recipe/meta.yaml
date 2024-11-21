@@ -11,11 +11,9 @@ source:
   sha256: ef2907f5b82ec8b2259bea41a2d7d798ecd67aa4a92a74a06550b9123dadd8a4
 
 build:
-  number: 1
+  number: 2
   skip: true  # [ not win]
-  skip: true  # [ py < 38]
   skip: true  # [ py >= 312]
-  skip: true  # [ python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
