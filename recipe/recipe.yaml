@@ -1,25 +1,26 @@
-{% set name = "py2exe" %}
-{% set version = "0.14.0.0" %}
+schema_version: 1
 
+context:
+  name: py2exe
+  version: 0.14.0.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://github.com/py2exe/py2exe/archive/v{{ version }}.tar.gz
+  url: https://github.com/py2exe/py2exe/archive/v${{ version }}.tar.gz
   sha256: ea771e35d509d6d04e6fe949e0c4bcc2ccddab9876805639fcdd319aa13a4a45
 
 build:
-  number: 1
-  skip: true  # [ not win]
-  skip: true  # [ py >= 314]
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 2
+  skip: not win or match(python, ">=3.14")
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ stdlib("c") }}
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
   host:
     - setuptools
     - pip
@@ -34,18 +35,13 @@ requirements:
     - python
     - setuptools
 
-test:
-  imports:
-    - py2exe
-  commands:
-    - pip check
-  requires:
-    - pip
+tests:
+  - python:
+      imports:
+        - py2exe
+      pip_check: true
 
 about:
-  home: http://www.py2exe.org/
-  dev_url: https://github.com/py2exe/py2exe
-  doc_url: http://www.py2exe.org/index.cgi/Tutorial
   summary: Build standalone executables for Windows
   license: MIT AND X11 AND MPL-2.0
   license_file:
@@ -54,6 +50,9 @@ about:
     - MIT-License.txt
   description: |
     `py2exe` is a distutils extension which allows to build standalone Windows executable programs (32-bit and 64-bit) from Python scripts
+  homepage: http://www.py2exe.org/
+  repository: https://github.com/py2exe/py2exe
+  documentation: http://www.py2exe.org/index.cgi/Tutorial
 
 extra:
   recipe-maintainers:
