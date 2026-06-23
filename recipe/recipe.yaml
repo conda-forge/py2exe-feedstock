@@ -1,16 +1,15 @@
 schema_version: 1
 
 context:
-  name: py2exe
-  version: "0.14.1.1"
+  version: "0.14.2.0"
 
 package:
-  name: ${{ name|lower }}
+  name: py2exe
   version: ${{ version }}
 
 source:
   url: https://github.com/py2exe/py2exe/archive/v${{ version }}.tar.gz
-  sha256: 190d417d5c1a588bb1bc2023ed9009473e2df873aee5787612d1045d5ae699f6
+  sha256: 78d98d395a9192e5da12931613f858b201e056e345e93ec3899b85b92e89e9e4
 
 build:
   number: 0
